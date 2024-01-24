@@ -1,0 +1,73 @@
+.header {
+    background-color: #72b172;
+    border-bottom: solid 2px #387038;
+    color: #fff;
+    transition: all .2s;
+}
+
+.main:hover {
+    background-color: #86b486;
+}
+
+.home:hover {
+    background-color: #86b486;
+}
+
+.icon, .menu {
+    display: none;
+}
+
+.link {
+    background-color: #ededed;
+
+}
+
+.linkContainer {
+    background-color: #ededed;
+}
+
+.linkActive {
+    background-color: rgb(219, 219, 219);
+}
+
+.link:hover {
+    background-color: rgb(219, 219, 219);
+}
+
+.menuButton:hover {
+    background-color: #86b486;
+}
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+  
+    .homeText {
+        display: flex;
+        font-size: 15px;
+    }
+
+    .navbarItemText {
+        display: flex;
+      font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .homeText {
+        display: none;
+    }
+
+    .navbarItemText {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .logo_home_box {
+        flex-direction: row-reverse;
+    }
+}

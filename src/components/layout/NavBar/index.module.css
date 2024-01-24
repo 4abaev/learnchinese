@@ -1,0 +1,35 @@
+.linkContainer {
+    background-color: #ededed;
+    border: 1px solid rgb(187, 187, 187);
+    border-radius: 5px;
+}
+.linkActive {
+    background-color: #72b172;
+    color: #fff;
+    transition: all .2s;
+    border: 0;
+    border-radius: 5px;
+}
+.link:hover {
+    background-color: rgb(219, 219, 219);
+    border-radius: 10px;
+}
+.link:not(:last-child) {
+    border-right: 1px solid rgb(187, 187, 187);
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.linkActive:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.link:not(:first-child), .linkActive:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+@media screen and (max-width: 500px) {
+    .linkContainer {
+        display: none;
+    }
+}

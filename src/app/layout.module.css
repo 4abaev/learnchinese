@@ -1,0 +1,13 @@
+
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+}
+.main {
+    flex: 1 1 auto;
+    user-select: none;
+}

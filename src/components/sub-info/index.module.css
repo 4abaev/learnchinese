@@ -1,0 +1,35 @@
+
+
+
+.root {
+    flex-direction: column;
+    justify-content: center;
+    max-width: 572px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+
+
+.textHolder {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.infoText {
+white-space: pre-line;
+}
+
+
+
+
+
+
+
+@media(max-width:587px) {
+    .textHolder {
+        padding: 0 12px;
+    }
+}

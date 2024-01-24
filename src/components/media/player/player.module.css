@@ -1,0 +1,348 @@
+.player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: calc(min(100%, 991px));
+  background-color: black;
+}
+
+.playerIos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  background-color: black;
+
+  margin: auto auto 0 auto;
+}
+
+.playerFullscreen {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+
+}
+
+.playerIosFullscreen {
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+}
+
+.playerIosFullscreen video {
+  margin-top: -20px;
+}
+
+.video {
+  display: flex;
+  width: 100%;
+}
+.playerFullscreen .video {
+  width: 100vw;
+}
+
+.loaderOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1; 
+}
+
+.subtitles_wrapper {
+  display: grid;
+  position: absolute;
+  padding: 2px 2px 5px 2px;
+  bottom: 60px;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0,0,0, 0.6);
+  grid-template-columns: 38px auto 38px;
+  
+}
+
+.second_subtitles {
+  position: absolute;
+  padding: 2px 2px 5px 2px;
+  bottom: 110px;
+  width: 100%;
+  line-height: 1;
+  min-height: 50px;
+  background-color: rgba(0,0,0, 0.6);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  z-index: 4;
+}
+
+.subtitles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 48px;
+  z-index: 5;
+  user-select: all;
+}
+
+.subtitles span {
+  max-width: 100vw;
+  flex-wrap: wrap;
+  text-align: center;
+  line-height: 1;
+}
+
+.controlsPanel {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  height: 60px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 0 5px;
+  z-index: 5;
+}
+
+.clickableSymbol {
+  user-select: none;
+  -webkit-user-select: none;
+  display: inline;
+  position: relative;
+  font-size: 20px;
+}
+
+.limitReached {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 11;
+  padding: 8px;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .clickableSymbol {
+  font-size: 32px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .clickableSymbol {
+    font-size: 16px;
+  }
+}
+.scalableText {
+  transition: 0.2s;
+  cursor: pointer;
+  z-index: 1001;
+}
+.scalableText:hover {
+  transform: scale(1.2);
+}
+.speedControls {
+  border: #878a8d 2px solid;
+  background-color: #808080;
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  z-index: 6;
+}
+.subControls {
+  border: #878a8d 2px solid;
+  background-color: #808080;
+  position: absolute;
+  right: 2px;
+  bottom: 30px;
+  z-index: 6;
+}
+
+.currentSpeedStyle {
+  background-color: #808080;
+  color: black;
+  font-weight: bold;
+}
+
+.speedStyle {
+  background-color: lightgray;
+  color: black;
+  font-weight: bold;
+
+}
+
+.displayNone {
+  display: none;
+  z-index: 6;
+}
+
+.speedControls button {
+  opacity: 0.7;
+  width: 50px;
+}
+
+.subControls button {
+  opacity: 0.7;
+  width: 50px;
+}
+
+.currentSubsStyle {
+  background-color: #808080;
+  color: white;
+}
+
+.subsStyle {
+  background-color: lightgray;
+  color: white;
+}
+
+.popup {
+  background-color: azure;
+  min-width: 250px;
+  min-height: 250px;
+  position: absolute;
+  color: black;
+  padding: 5px;
+  border-radius: 2px;
+  text-align: center;
+  z-index: 1000;
+  bottom: 60px;
+  left: calc(50% - 125px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.popup::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 16px;
+  border-style: solid;
+  border-color: azure transparent transparent transparent;
+}
+
+.popup p {
+  margin: 10px 0;
+}
+
+.popup p:first-child {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.popup p:first-child:hover {
+  text-decoration: underline;
+}
+
+.volumeSlider {
+  bottom: 50px;
+  right: -50%;
+  position: absolute;
+  width: 50px;
+  height: 16px;
+  cursor: pointer;
+  transform: rotate(-90deg);
+}
+
+.progressSlider {
+  width: calc(100% - 10px);
+  height: 16px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.progressSlider,
+.progressSlider::-webkit-slider-runnable-track,
+.progressSlider::-webkit-slider-thumb,
+.volumeSlider,
+.volumeSlider::-webkit-slider-runnable-track,
+.volumeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: transparent;
+}
+.progressSlider::-webkit-slider-runnable-track,
+.volumeSlider::-webkit-slider-runnable-track {
+  height: 4px;
+
+  background-image: linear-gradient(to right, #d7d7d7, #d7d7d7);
+  background-color: #7f8492;
+  background-size: var(--background-size, 0%) 100%;
+  background-repeat: no-repeat;
+
+  border-radius: 5px;
+}
+
+.progressSlider::-webkit-slider-thumb,
+.volumeSlider::-webkit-slider-thumb {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  background: #293043;
+  border: solid white 1px;
+  border-radius: 50%;
+  margin-top: -4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/** FF*/
+
+.progressSlider::-moz-range-progress,
+.volumeSlider::-moz-range-progress {
+  background-color: #293043;
+  border-radius: 5px;
+}
+
+.progressSlider::-moz-range-track,
+.volumeSlider::-moz-range-progress {
+  background-color: #d7d7d7;
+  border-radius: 5px;
+}
+
+.progressSlider::-moz-range-thumb,
+.volumeSlider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  background: #293043;
+  border: solid white 1px;
+  border-radius: 50%;
+  margin-top: -6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.toggleButton {
+  margin: 0 4px;
+  height: 40px;
+  width: 40px;
+}

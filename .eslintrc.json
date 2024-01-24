@@ -1,0 +1,28 @@
+{
+  "extends": ["next", "prettier"],
+  "plugins": ["import", "react", "react-hooks", "unused-imports"],
+  "rules": {
+    "@typescript-eslint/no-explicit-any": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "no-unused-vars": "warn",
+    "no-console": "warn",
+    "quotes": ["warn", "single"],
+    "prefer-const": "error",
+    "indent": ["warn", 4],
+    "comma-dangle": ["error", "always-multiline"],
+    "semi": ["error", "always"],
+    "jsx-quotes": [2, "prefer-single"],
+    "react/jsx-indent": ["warn", 4],
+    "react/jsx-indent-props": ["warn", 4],
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx", ".tsx", ".ts"] }],
+    "unused-imports/no-unused-imports": "warn",
+    "import/order": ["warn", {
+      "newlines-between": "never",
+      "groups": ["builtin", "external", "parent", "sibling", "index"],
+      "warnOnUnassignedImports": true
+    }],
+    "array-bracket-spacing": [2, "never"]
+  }
+}
