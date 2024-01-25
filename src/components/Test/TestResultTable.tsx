@@ -21,8 +21,8 @@ const TestResultTable = ({ answers }: { answers: Answer[]}) => {
                 {answers.map((answer, index) => (
                     <Tr key={index}>
                         <Td p={[1, 4]} fontSize={[14, 18]}>{answer.wordOnChinese}</Td>
-                        <Td p={[1, 4]} fontSize={[14, 18]}>{answer.correctAnswer}</Td>
-                        <Td p={[1, 4]} fontSize={[14, 18]}>{answer.yourAnswer}</Td>
+                        <Td p={[1, 4]} fontSize={[14, 18]}>{answer.correctPinyin} <br /> {answer.correctTranslate}</Td>
+                        <Td p={[1, 4]} fontSize={[14, 18]}>{answer.selectedPinyin} <br /> {answer.selectedTranslation}</Td>
                         <Td p={[1, 4]} fontSize={[14, 18]}>
                             {answer.isCorrect ? (
                                 <Icon boxSize={[4, 7]}  color='green' as={CiFaceSmile} />

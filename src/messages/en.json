@@ -137,8 +137,8 @@
     "test-retry": "Retry",
     "test-back": "Back",
     "answer-word": "Word",
-    "answer-right": "Translate",
-    "answer-client": "Your translate",
+    "answer-right": "Right answer",
+    "answer-client": "Your answer",
     "warn": "Warning",
     "warn-p": "You need to add at least 5 words to pass the test",
     "close": "Close"
